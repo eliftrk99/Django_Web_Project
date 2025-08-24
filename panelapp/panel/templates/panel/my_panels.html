@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %} Panels {% endblock %}
+
+{% block content %}
+
+    <div class="container mt-3">
+    <div class="row">
+        <div class="col-3">
+            {% include 'partials/_categories.html' %}
+        </div>
+        <div class="col-9">
+            <h1>Etkinliklerim</h1>
+            <hr>
+            {% for panel in panels %}
+
+                {% if panel.is_joined %}  
+                    {% include 'panel/partials/_panel.html' %}
+                {% endif %}
+
+            {% endfor %}
+        </div>
+    </div>    
+</div>
+
+{% endblock %}

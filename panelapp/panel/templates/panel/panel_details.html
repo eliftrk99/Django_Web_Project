@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+{% block title %} Panel Details {% endblock %}
+
+{% block content %}
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <h1 class="card-title h3 mb-3">
+                                    {{ panel.title|title }}
+                            </h1>
+                            <img src="{{ panel.image.url }}" alt="" class="img-fluid" style="float: left; margin-right: 30px; margin-bottom: 30px;">
+                            <p class="card-text">{{ panel.description|safe }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+</div>
+
+{% endblock %}
